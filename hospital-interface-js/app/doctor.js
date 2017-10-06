@@ -1,12 +1,9 @@
-class Hospital {
-  constructor(name) {
-    this.name = name;
-    this.doctors = [];
+class Doctor {
+  constructor(first_name, middle_name, last_name) {
+    this.first_name = first_name;
+    this.middle_name = middle_name;
+    this.last_name = last_name;
     this.patients = [];
-  };
-
-  hireDoctor(doctor) {
-    this.doctors.push(doctor);
   };
 };
 

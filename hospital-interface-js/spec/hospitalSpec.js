@@ -21,5 +21,11 @@ describe('Hospital', () => {
     it('is instantiated with no patients (null)', () => {
       expect(hospital_test.patients.length).toBe(0);
     });
+
+    it('can hire a doctor (push a doctor into the array)', () => {
+      doctor_hire = new Doctor("James", "Peter", "Smith");
+      hospital_test.hireDoctor(doctor_hire);
+      expect(hospital_test.doctors.length).toChange(1)
+    });
   });
 });
