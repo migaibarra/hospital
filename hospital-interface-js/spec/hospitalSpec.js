@@ -25,7 +25,7 @@ describe('Hospital', () => {
     it('can hire a doctor (push a doctor into the array)', () => {
       doctor_hire = new Doctor("James", "Peter", "Smith");
       hospital_test.hireDoctor(doctor_hire);
-      expect(hospital_test.doctors.length).toChange(1)
+      expect(hospital_test.doctors).toContain(doctor_hire);
     });
   });
 });
