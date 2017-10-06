@@ -7,7 +7,7 @@ describe('Hospital', () => {
     hospital_test = new Hospital();
   });
 
-  it('has a name' => {
+  it('has a name', () => {
     expect(hospital_test.name).toBe("St. Johns Hospital");
   });
 });
