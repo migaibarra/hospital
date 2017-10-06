@@ -1,10 +1,10 @@
 /*global Game:true*/
 
 describe('Hospital', () => {
-  let hospital;
+  let hospital_test;
 
   beforeEach(() => {
-    hospital_test = new Hospital();
+    hospital_test = new Hospital("St. Johns Hospital");
   });
 
   it('has a name', () => {
