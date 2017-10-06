@@ -27,5 +27,11 @@ describe('Hospital', () => {
       hospital_test.hireDoctor(doctor_hire);
       expect(hospital_test.doctors).toContain(doctor_hire);
     });
+
+    it('can admit a patient (push a patient into the array)', () => {
+      patient_admission = new Patient("Sam", "Sounder", "Zaks");
+      hospital_test.admitPatient(patient_admission);
+      expect(hospital_test.patients).toContain(patient_admission);
+    });
   });
 });
