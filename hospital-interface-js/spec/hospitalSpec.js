@@ -54,16 +54,24 @@ describe('Hospital', () => {
     let doctor_rxx;
     let doctorRx;
     beforeEach(() => {
-      doctor_rxx = new Doctor("Robert", "", "Brinkley");
-      doctorRx = new Doctor("Rebecca", "Jessica", "Garza");
-    });
-
-    it('can reassign a doctor to a patient', () => {
       hospital_test.hireDoctor(doctor_rx);
       hospital_test.admitPatient(patient_admission);
+      doctor_rxx = new Doctor("Robert", "", "Brinkley");
+      doctorRx = new Doctor("Rebecca", "Jessica", "Garza");
       hospital_test.hireDoctor(doctorRx);
-      hospital_test.reassignPatientDoctor("Zaks", "Garza");
-      expect(patient_admission.doctors).toBe(doctorRx);
+      hospital_test.hireDoctor(doctor_rxx);
     });
+
+    it('can lookup doctors by last name', () => {
+      expect(hospital_test.doctorLookup("Brinkley")).toBe(hospital_test.doctors[2]);
+    });
+
+    it('can lookup patients by last name', () => {
+      expect(hospital_test.patientLookup("Zaks")).toBe(hospital_test.patients[0]);
+    });
+
+    it('can reassign a doctor for a patient', () => {
+
+    })
   });
 });

@@ -15,9 +15,22 @@ class Hospital {
     this.patients.push(patient);
   };
 
-  // reassignPatientDoctor(patient, doctorLastName) {
-  //   const reassignedDoctor = this.doctor.find()
-  //   patient.doctors =
+  doctorLookup(last_name) {
+    return this.doctors.find((doctor) => {
+      return doctor.last_name === last_name;
+    });
+  };
+
+  patientLookup(last_name) {
+    return this.patients.find((patient) => {
+      return patient.last_name === last_name
+    });
+  };
+
+  // reassignPatientDoctor(patientLastName, doctorLastName) {
+  //   const findByName = (name) => {
+  //
+  //   }
   // };
 };
 
