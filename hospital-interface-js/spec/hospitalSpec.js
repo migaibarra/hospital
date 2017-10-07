@@ -71,8 +71,18 @@ describe('Hospital', () => {
     });
 
     it('can reassign a doctor for a patient', () => {
-      hospital_test.reassignPatientDoctor('Zaks', 'Garza')
+      hospital_test.reassignPatientDoctor('Zaks', 'Garza');
       expect(hospital_test.patientLookup('Zaks').doctors).toBe(hospital_test.doctors[1]);
     });
+
+    // it('assigns patients to doctors', () => {
+    //   const aPatient = new Patient("Blaine", "", "Anderson");
+    //   const anotherPatient = new Patient("John", "Gregory", "Manlove");
+    //   hospital_test.admitPatient(aPatient);
+    //   hospital_test.admitPatient(anotherPatient);
+    //   hospital_test.reassignPatientDoctor("Anderson", "Petrucci");
+    //   hospital_test.reassignPatientDoctor("Manlove", "Petrucci");
+    //   expect(hospital_test.doctorLookup("Petrucci").patients).toBe([patient_admission, aPatient, anotherPatient]);
+    // });
   });
 });

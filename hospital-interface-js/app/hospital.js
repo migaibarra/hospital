@@ -11,6 +11,7 @@ class Hospital {
 
   admitPatient(patient) {
     patient.doctors = this.doctors[Math.floor(Math.random()*this.doctors.length)];
+    // this.doctorLookup(patient.doctors).patients(patient); // CHECK CODE
     patient.admission = new Date();
     this.patients.push(patient);
   };
@@ -29,8 +30,9 @@ class Hospital {
 
   reassignPatientDoctor(patientLastName, doctorLastName) {
     const patient = this.patientLookup(patientLastName);
-    const doctor = this.doctorLookup(doctorLastName);
-    patient.doctors = doctor;
+    const reassignedDoctor = this.doctorLookup(doctorLastName);
+    const currentDoctor = patient.doctors
+    patient.doctors = reassignedDoctor;
   };
 };
 
