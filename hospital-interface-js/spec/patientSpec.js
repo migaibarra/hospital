@@ -25,5 +25,9 @@ describe('Patient', () => {
     it('is not instantiated with a doctor', () => {
       expect(sick_patient.doctors).toBe(null);
     });
+
+    it('is not instantiated with a discharge time', () => {
+      expect(sick_patient.discharge).toBe(null);
+    });
   });
 });
