@@ -17,5 +17,13 @@ describe('Patient', () => {
     it('has a last_name', () => {
       expect(sick_patient.last_name).toBe("Anderson");
     });
+
+    it('is not instantiated with an admission date', () => {
+      expect(sick_patient.admission).toBe(null);
+    });
+
+    it('is not instantiated with a doctor', () => {
+      expect(sick_patient.doctors).toBe(null);
+    });
   });
 });

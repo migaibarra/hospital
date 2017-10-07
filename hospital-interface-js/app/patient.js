@@ -5,5 +5,5 @@ class Patient {
     this.last_name = last_name;
     this.admission = null;
     this.doctors = null;
-  }
-}
+  };
+};

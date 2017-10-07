@@ -14,6 +14,11 @@ class Hospital {
     patient.admission = new Date();
     this.patients.push(patient);
   };
+
+  // reassignPatientDoctor(patient, doctorLastName) {
+  //   const reassignedDoctor = this.doctor.find()
+  //   patient.doctors =
+  // };
 };
 
 // This pattern of adding a class to Window is **NOT** standard and not best-practice

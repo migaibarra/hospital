@@ -49,4 +49,21 @@ describe('Hospital', () => {
       expect(patient_admission.doctors instanceof Doctor).toBe(true)
     });
   });
+
+  describe("behaviors", () => {
+    let doctor_rxx;
+    let doctorRx;
+    beforeEach(() => {
+      doctor_rxx = new Doctor("Robert", "", "Brinkley");
+      doctorRx = new Doctor("Rebecca", "Jessica", "Garza");
+    });
+
+    it('can reassign a doctor to a patient', () => {
+      hospital_test.hireDoctor(doctor_rx);
+      hospital_test.admitPatient(patient_admission);
+      hospital_test.hireDoctor(doctorRx);
+      hospital_test.reassignPatientDoctor("Zaks", "Garza");
+      expect(patient_admission.doctors).toBe(doctorRx);
+    });
+  });
 });
