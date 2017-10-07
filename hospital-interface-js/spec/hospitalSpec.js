@@ -2,9 +2,11 @@
 
 describe('Hospital', () => {
   let hospital_test;
+  let patient_admission;
 
   beforeEach(() => {
     hospital_test = new Hospital("St. Johns Hospital");
+    patient_admission = new Patient("Sam", "Sounder", "Zaks");
   });
 
   describe('attributes', () => {
@@ -29,9 +31,12 @@ describe('Hospital', () => {
     });
 
     it('can admit a patient (push a patient into the array)', () => {
-      patient_admission = new Patient("Sam", "Sounder", "Zaks");
       hospital_test.admitPatient(patient_admission);
       expect(hospital_test.patients).toContain(patient_admission);
     });
+
+    it('will assign an admission time when admitting a patient', () => {
+
+    })
   });
 });
