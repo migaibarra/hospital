@@ -2,10 +2,12 @@
 
 describe('Hospital', () => {
   let hospital_test;
+  let doctor_rx;
   let patient_admission;
 
   beforeEach(() => {
     hospital_test = new Hospital("St. Johns Hospital");
+    doctor_rx = new Doctor("Luigi", "Aldo", "Petrucci")
     patient_admission = new Patient("Sam", "Sounder", "Zaks");
   });
 
@@ -36,7 +38,15 @@ describe('Hospital', () => {
     });
 
     it('will assign an admission time when admitting a patient', () => {
+      hospital_test.admitPatient(patient_admission);
+      expect(patient_admission.admission instanceof Date).toBe(true);
+    });
 
-    })
+    it('will assign a doctor when admitting a patient', () => {
+      hospital_test.hireDoctor(doctor_rx);
+      hospital_test.admitPatient(patient_admission);
+      console.log(patient_admission)
+      expect(patient_admission.doctors instanceof Doctor).toBe(true)
+    });
   });
 });
