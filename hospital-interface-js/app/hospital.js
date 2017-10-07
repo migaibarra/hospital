@@ -27,11 +27,11 @@ class Hospital {
     });
   };
 
-  // reassignPatientDoctor(patientLastName, doctorLastName) {
-  //   const findByName = (name) => {
-  //
-  //   }
-  // };
+  reassignPatientDoctor(patientLastName, doctorLastName) {
+    const patient = this.patientLookup(patientLastName);
+    const doctor = this.doctorLookup(doctorLastName);
+    patient.doctors = doctor;
+  };
 };
 
 // This pattern of adding a class to Window is **NOT** standard and not best-practice

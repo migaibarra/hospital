@@ -71,7 +71,8 @@ describe('Hospital', () => {
     });
 
     it('can reassign a doctor for a patient', () => {
-
-    })
+      hospital_test.reassignPatientDoctor('Zaks', 'Garza')
+      expect(hospital_test.patientLookup('Zaks').doctors).toBe(hospital_test.doctors[1]);
+    });
   });
 });
